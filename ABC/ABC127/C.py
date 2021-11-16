@@ -1,0 +1,19 @@
+from sys import exit, stdin, setrecursionlimit
+from bisect import bisect_left, bisect_right, insort_left, insort_right
+from collections import defaultdict, deque, Counter
+from heapq import heappop, heappush, heapify
+from itertools import permutations, combinations, accumulate
+from math import sqrt
+from copy import copy, deepcopy
+INF = 10**15
+MOD = 10**9+7
+
+N, M = map(int, input().split())
+left = -INF
+right = INF
+for _ in range(M):
+    l, r = map(int, input().split())
+    left = max(l, left)
+    right = min(r, right)
+
+print(max(0, right-left+1))
