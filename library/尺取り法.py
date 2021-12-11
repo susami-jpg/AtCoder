@@ -22,6 +22,7 @@ def syakutori1(A, K):
 
 #配列Aの連続部分列の和がKより大きくなるような(i, j)の組の個数を数える
 def syakutori2(A, K):
+    #rはr+1を含めるかどうかから始めるので[0]をAに足しておく
     A = [0] + A
     n = len(A)
     r = 0
@@ -47,6 +48,7 @@ def syakutori3(A, K):
         while r+1 < n and S + A[r+1] <= K:
             S += A[r+1]
             r += 1
+        S -= A[l+1]
         ans = max(ans, r-l)
     return ans
 

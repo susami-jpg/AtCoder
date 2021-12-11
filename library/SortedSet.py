@@ -25,7 +25,7 @@ x が s に含まれていなければ x を追加し、True を返します。O
 
 s.discard(x)
 x が s に含まれていれば x を削除し、True を返します。O(√N) amotized / O(N) worst
-
+　　
 s.lt(x) / s.le(x) / s.gt(x) / s.ge(x)
 x より小さい / 以下 / より大きい / 以上で 最小 / 最大 の要素を返します。存在しなければ None をを返します。O(log N)
 
